@@ -40,7 +40,7 @@ ApplicationWindow {
                     anchors.fill: parent
 
                     Image {
-                        source: "/Users/divyadarsi/Avatar/GUI5_ManualDroneControl/images3/Home.png"
+                        source: "GUI_Pics/home.png"
                         width: 150
                         height: 150
                         anchors.centerIn: parent
@@ -93,7 +93,7 @@ ApplicationWindow {
                         anchors.fill: parent
 
                         Image {
-                            source: "/Users/divyadarsi/Avatar/GUI5_ManualDroneControl/images3/Up.png"
+                            source: "GUI_Pics/up.png"
                             width: 150
                             height: 150
                             anchors.centerIn: parent
@@ -198,7 +198,7 @@ ApplicationWindow {
                     anchors.fill: parent
 
                     Image {
-                        source: "/Users/divyadarsi/Avatar/GUI5_ManualDroneControl/images3/Forward.png"
+                        source: "GUI_Pics/Forward.png"
                         width: 150
                         height: 150
                         anchors.centerIn: parent
@@ -249,7 +249,7 @@ ApplicationWindow {
                     anchors.fill: parent
 
                     Image {
-                        source: "/Users/divyadarsi/Avatar/GUI5_ManualDroneControl/images3/Turn Left.png"
+                        source: "GUI_Pics/turnLeft.png"
                         width: 150
                         height: 150
                         anchors.centerIn: parent
@@ -297,7 +297,7 @@ ApplicationWindow {
                     anchors.fill: parent
 
                     Image {
-                        source: "/Users/divyadarsi/Avatar/GUI5_ManualDroneControl/images3/Left.png"
+                        source: "GUI_Pics/left.png"
                         width: 150
                         height: 150
                         anchors.centerIn: parent
@@ -345,7 +345,7 @@ ApplicationWindow {
                     anchors.fill: parent
 
                     Image {
-                        source: "/Users/divyadarsi/Avatar/GUI5_ManualDroneControl/images3/Stream.png"
+                        source: "images/Stream.png"
                         width: 150
                         height: 150
                         anchors.centerIn: parent
@@ -393,7 +393,7 @@ ApplicationWindow {
                     anchors.fill: parent
 
                     Image {
-                        source: "/Users/divyadarsi/Avatar/GUI5_ManualDroneControl/images3/Right.png"
+                        source: "GUI_Pics/right.png"
                         width: 150
                         height: 150
                         anchors.centerIn: parent
@@ -442,7 +442,7 @@ ApplicationWindow {
                     anchors.fill: parent
 
                     Image {
-                        source: "/Users/divyadarsi/Avatar/GUI5_ManualDroneControl/images3/Turn Right.png"
+                        source: "GUI_Pics/turnRight.png"
                         width: 150
                         height: 150
                         anchors.centerIn: parent
@@ -496,7 +496,7 @@ ApplicationWindow {
                     anchors.fill: parent
 
                     Image {
-                        source: "/Users/divyadarsi/Avatar/GUI5_ManualDroneControl/images3/Back.png"
+                        source: "GUI_Pics/back.png"
                         width: 150
                         height: 150
                         anchors.centerIn: parent
@@ -550,7 +550,7 @@ ApplicationWindow {
                     anchors.fill: parent
 
                     Image {
-                        source: "/Users/divyadarsi/Avatar/GUI5_ManualDroneControl/images3/Connect.png"
+                        source: "GUI_Pics/connect.png"
                         width: 150
                         height: 150
                         anchors.centerIn: parent
@@ -598,7 +598,7 @@ ApplicationWindow {
                     anchors.fill: parent
 
                     Image {
-                        source: "/Users/divyadarsi/Avatar/GUI5_ManualDroneControl/images3/Down.png"
+                        source: "GUI_Pics/down.png"
                         width: 150
                         height: 150
                         anchors.centerIn: parent
@@ -646,7 +646,7 @@ ApplicationWindow {
                     anchors.fill: parent
 
                     Image {
-                        source: "/Users/divyadarsi/Avatar/GUI5_ManualDroneControl/images3/Takeoff.png"
+                        source: "GUI_Pics/takeoff.png"
                         width: 150
                         height: 150
                         anchors.centerIn: parent
@@ -692,7 +692,7 @@ ApplicationWindow {
                     anchors.fill: parent
 
                     Image {
-                        source: "/Users/divyadarsi/Avatar/GUI5_ManualDroneControl/images3/Land.png"
+                        source: "GUI_Pics/land.png"
                         width: 150
                         height: 150
                         anchors.centerIn: parent

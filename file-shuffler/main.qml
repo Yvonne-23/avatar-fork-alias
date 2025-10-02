@@ -7,94 +7,39 @@ ApplicationWindow {
     visible: true
     width: 640
     height: 480
-    color: "#4a5b7b" // Set the background color
+    color: "#4a5b7b"
     title: "File Shuffler"
 
-    property string outputBoxText: ""
-    property string selectedDirectory: ""
-    property bool ranShuffle: false 
+    ColumnLayout {
+        anchors.centerIn: parent
+        spacing: 20
 
-    Column {
-        anchors.fill: parent
-        spacing: 10
-
-        Text {
-            text: "File Shuffler"
-            color: "white"
-            font.bold: true
-            font.pixelSize: 24
-            horizontalAlignment: Text.AlignHCenter
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.top: parent.top
-            anchors.topMargin: 20
+        Button {
+            text: "Select CSV File"
+            Layout.alignment: Qt.AlignHCenter
+            onClicked: fileDialog.open()
         }
 
-        Rectangle {
-            width: parent.width * 0.6
-            height: parent.height * 0.6
-            color: "lightgrey"
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.verticalCenter: parent.verticalCenter
+        FileDialog {
+            id: fileDialog
+            title: "Choose a CSV file to shuffle"
+            nameFilters: ["CSV files (*.csv)"]
+            fileMode: FileDialog.OpenFile
+            visible: false
 
-            ScrollView {
-                anchors.fill: parent
-
-                TextArea {
-                    id: outputBox
-                    text: outputBoxText
-                    color: "black"
-                    readOnly: true
+            onAccepted: {
+                if (fileDialog.selectedFile) {
+                    console.log("File selected:", fileDialog.selectedFile)
+                    fileShufflerGui.shuffle_csv_file(fileDialog.selectedFile)
+                } else {
+                    console.log("No file returned")
                 }
             }
-        }
 
-        Row {
-            id: buttonRow
-            spacing: 20
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.top: parent.verticalCenter
-            anchors.topMargin: parent.height * 0.3 + 10
-
-            Button {
-                id: folderButton
-                text: "Select your Directory"
-                onClicked: myFolderDialog.open()
+            onRejected: {
+                console.log("File dialog canceled")
             }
-
-            Button {
-                id: runButton
-                text: "Run File Shuffler"
-                onClicked: {
-                    ranShuffle = true; 
-                    outputBoxText = `Running File Shuffler...\n`;
-                    var output = fileShufflerGui.run_file_shuffler_program(selectedDirectory);
-                    outputBoxText += output;
-                }
-            }
-        }
-
-        Text {
-            id: ranText
-            text: "Shuffle Complete!"
-            color: "yellow"
-            font.bold: true
-            font.pixelSize: 18
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.top: buttonRow.bottom 
-            anchors.topMargin: 10 
-            visible: ranShuffle 
-        }
-    }
-
-    FolderDialog {
-        id: myFolderDialog
-        title: "Select Your Directory"
-        onAccepted:
-        {
-            let cleanedDirectory = String(myFolderDialog.selectedFolder);
-            cleanedDirectory = cleanedDirectory.replace("file:///", "");
-            selectedDirectory = cleanedDirectory;
-            outputBoxText += `Selected directory: ${selectedDirectory}\n`;
         }
     }
 }
+
